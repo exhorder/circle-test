@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install node js
+          command: curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash - && sudo apt-get install -y nodejs
+      - run:
           name: Install sentry-cli
           command: npm install sentry-cli-binary
       - run:
