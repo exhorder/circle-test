@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install sentry-cli
-          command: curl -sL https://sentry.io/get-cli/ | bash
+          command: npm install sentry-cli-binary
       - run:
           name: Print sentry-cli version
-          command: sentry-cli --version
+          command: node_modules/.bin/sentry-cli --version
